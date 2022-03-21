@@ -20,7 +20,7 @@ as
     return v_return;
   exception
     when others then
-      v_return := 'PL';
+      v_return := 'USA';
       return v_return;
   end f_get_country_id_by_name;
   
