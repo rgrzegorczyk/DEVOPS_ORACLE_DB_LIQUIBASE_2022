@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.4.xsd">  
+
+            <changeSet  author="${release_author}"  id="Welcome" failOnError="true" runAlways="true" context="${release_number}" labels="${release_number}">
+              <preConditions onFail="WARN" onError="CONTINUE" onFailMessage="Welcome to the Conference!!!!" onSqlOutput="TEST">
+                <sqlCheck expectedResult="0">
+                  select count(*)
+                  from APPLICATION_PARAMS
+                 where 1=1 
+                   and CODE='ENVIRONMENT'
+                   and VALUE='DEV'
+                </sqlCheck>                  
+            </preConditions>  
+                <sql>
+                select 1 from dual
+                </sql>
+                <rollback>
+                    SELECT 1 FROM DUAL;
+                </rollback>  
+            </changeSet>                               
+
+            
+</databaseChangeLog>

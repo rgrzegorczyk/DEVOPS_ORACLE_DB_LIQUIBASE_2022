@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.4.xsd">  
+            
+            <includeAll path="/database/release_scripts" />
+            <changeSet  author="${release_author}"  id="compile_invalid_objects_${release_number}" failOnError="true" context="${release_number}" labels="${release_number}">
+                <preConditions onFail="CONTINUE" onFailMessage="Compile when invalid objects exist" onSqlOutput="TEST">
+                    <sqlCheck expectedResult="1">
+                    select count(*)
+                    from all_objects
+                   where 1=1 
+                     and owner = 'LIQUIBASE'
+                     and last_ddl_time> SYSDATE - 1
+                     and status = 'INVALID'
+                     and rownum=1
+                  </sqlCheck>                     
+              </preConditions>  
+              <comment>Compile invalid objects</comment>                                             
+                  <sqlFile  dbms="oracle"
+                            encoding="UTF-8"
+                            endDelimiter="\n/"
+                            path="database/dba_scripts/compile_invalid.sql"
+                            splitStatements="true"
+                            stripComments="false"/>
+                          <rollback>
+                              SELECT 1 FROM DUAL;
+                          </rollback>  
+              </changeSet>                                                                     
+</databaseChangeLog>
