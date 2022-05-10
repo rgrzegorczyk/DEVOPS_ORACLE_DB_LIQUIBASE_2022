@@ -1,0 +1,1128 @@
+{
+  "snapshot": {
+    "created": "2022-05-10T09:26:10.419",
+    "database": {
+      "productVersion": "Oracle Database 18c Express Edition Release 18.0.0.0.0 - Production\nVersion 18.4.0.0.0",
+      "shortName": "oracle",
+      "majorVersion": "18",
+      "minorVersion": "0",
+      "user": "LIQUIBASE",
+      "productName": "Oracle",
+      "url": "jdbc:oracle:thin:@127.0.0.1:1521/XEPDB1"
+    },
+    "objects": {
+      "liquibase.structure.core.Catalog": [
+        {
+          "catalog": {
+            "default": true,
+            "name": "LIQUIBASE",
+            "snapshotId": "e63d100"
+          }
+        }]
+      ,
+      "liquibase.structure.core.Column": [
+        {
+          "column": {
+            "name": "AUTHOR",
+            "nullable": false,
+            "order": "2!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d150",
+            "snapshotId": "e63d152",
+            "type": {
+              "columnSize": "255!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "CITY",
+            "nullable": false,
+            "order": "4!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#e63d108",
+            "snapshotId": "e63d112",
+            "type": {
+              "columnSize": "30!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "CITY",
+            "notNullConstraintName": "LOC_CITY_NN",
+            "nullable": false,
+            "order": "4!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d114",
+            "remarks": "A not null column that shows city where an office, warehouse, or \nproduction site of a company is located.",
+            "snapshotId": "e63d119",
+            "type": {
+              "columnSize": "30!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "CITY",
+            "nullable": false,
+            "order": "3!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#e63d103",
+            "snapshotId": "e63d106",
+            "type": {
+              "columnSize": "30!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "CODE",
+            "nullable": true,
+            "order": "1!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d137",
+            "snapshotId": "e63d138",
+            "type": {
+              "columnSize": "30!{java.lang.Integer}",
+              "columnSizeUnit": "CHAR!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "COMMENTS",
+            "nullable": true,
+            "order": "9!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d150",
+            "snapshotId": "e63d159",
+            "type": {
+              "columnSize": "255!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "CONTEXTS",
+            "nullable": true,
+            "order": "12!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d150",
+            "snapshotId": "e63d162",
+            "type": {
+              "columnSize": "255!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "COUNTRY_ID",
+            "notNullConstraintName": "COUNTRY_ID_NN",
+            "nullable": false,
+            "order": "1!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d124",
+            "remarks": "Primary key of countries table.",
+            "snapshotId": "e63d123",
+            "type": {
+              "columnSize": "100!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "COUNTRY_ID",
+            "nullable": true,
+            "order": "6!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d114",
+            "remarks": "Country where an office, warehouse, or production site of a company is\nlocated. Foreign key to country_id column of the countries table.",
+            "snapshotId": "e63d121",
+            "type": {
+              "columnSize": "100!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "COUNTRY_NAME",
+            "nullable": true,
+            "order": "2!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d124",
+            "remarks": "Country name",
+            "snapshotId": "e63d126",
+            "type": {
+              "columnSize": "40!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "COUNTRY_NAME",
+            "nullable": true,
+            "order": "1!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#e63d108",
+            "snapshotId": "e63d109",
+            "type": {
+              "columnSize": "40!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "DATEEXECUTED",
+            "nullable": false,
+            "order": "4!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d150",
+            "snapshotId": "e63d154",
+            "type": {
+              "columnSize": "11!{java.lang.Integer}",
+              "dataTypeId": "93!{java.lang.Integer}",
+              "typeName": "TIMESTAMP(6)"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "DEPLOYMENT_ID",
+            "nullable": true,
+            "order": "14!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d150",
+            "snapshotId": "e63d164",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "DESCRIPTION",
+            "nullable": true,
+            "order": "4!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d137",
+            "snapshotId": "e63d141",
+            "type": {
+              "columnSize": "4000!{java.lang.Integer}",
+              "columnSizeUnit": "CHAR!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "DESCRIPTION",
+            "nullable": true,
+            "order": "8!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d150",
+            "snapshotId": "e63d158",
+            "type": {
+              "columnSize": "255!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "EXECTYPE",
+            "nullable": false,
+            "order": "6!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d150",
+            "snapshotId": "e63d156",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "FILENAME",
+            "nullable": false,
+            "order": "3!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d150",
+            "snapshotId": "e63d153",
+            "type": {
+              "columnSize": "255!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "ID",
+            "nullable": false,
+            "order": "1!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d150",
+            "snapshotId": "e63d151",
+            "type": {
+              "columnSize": "255!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "ID",
+            "nullable": false,
+            "order": "1!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d165",
+            "snapshotId": "e63d167",
+            "type": {
+              "dataTypeId": "3!{java.lang.Integer}",
+              "decimalDigits": "0!{java.lang.Integer}",
+              "typeName": "NUMBER"
+            }
+          }
+        },
+        {
+          "column": {
+            "defaultValue": "1",
+            "name": "IS_EDITABLE",
+            "nullable": true,
+            "order": "7!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d137",
+            "snapshotId": "e63d144",
+            "type": {
+              "columnSize": "20!{java.lang.Integer}",
+              "columnSizeUnit": "CHAR!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "JOB_ID",
+            "nullable": false,
+            "order": "1!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d130",
+            "snapshotId": "e63d132",
+            "type": {
+              "columnSize": "10!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "JOB_TITLE",
+            "notNullConstraintName": "JOB_TITLE_NN",
+            "nullable": false,
+            "order": "2!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d130",
+            "snapshotId": "e63d133",
+            "type": {
+              "columnSize": "35!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "LABELS",
+            "nullable": true,
+            "order": "13!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d150",
+            "snapshotId": "e63d163",
+            "type": {
+              "columnSize": "255!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "LIQUIBASE",
+            "nullable": true,
+            "order": "11!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d150",
+            "snapshotId": "e63d161",
+            "type": {
+              "columnSize": "20!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "LOCATION_ID",
+            "nullable": false,
+            "order": "1!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d114",
+            "remarks": "Primary key of locations table",
+            "snapshotId": "e63d116",
+            "type": {
+              "columnSize": "4!{java.lang.Integer}",
+              "dataTypeId": "3!{java.lang.Integer}",
+              "decimalDigits": "0!{java.lang.Integer}",
+              "typeName": "NUMBER"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "LOCKED",
+            "nullable": false,
+            "order": "2!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d165",
+            "snapshotId": "e63d168",
+            "type": {
+              "columnSize": "1!{java.lang.Integer}",
+              "dataTypeId": "3!{java.lang.Integer}",
+              "decimalDigits": "0!{java.lang.Integer}",
+              "typeName": "NUMBER"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "LOCKEDBY",
+            "nullable": true,
+            "order": "4!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d165",
+            "snapshotId": "e63d170",
+            "type": {
+              "columnSize": "255!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "LOCKGRANTED",
+            "nullable": true,
+            "order": "3!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d165",
+            "snapshotId": "e63d169",
+            "type": {
+              "columnSize": "11!{java.lang.Integer}",
+              "dataTypeId": "93!{java.lang.Integer}",
+              "typeName": "TIMESTAMP(6)"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "MAX_SALARY",
+            "nullable": true,
+            "order": "4!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d130",
+            "snapshotId": "e63d135",
+            "type": {
+              "columnSize": "6!{java.lang.Integer}",
+              "dataTypeId": "3!{java.lang.Integer}",
+              "decimalDigits": "0!{java.lang.Integer}",
+              "typeName": "NUMBER"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "MD5SUM",
+            "nullable": true,
+            "order": "7!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d150",
+            "snapshotId": "e63d157",
+            "type": {
+              "columnSize": "35!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "MIN_SALARY",
+            "nullable": true,
+            "order": "3!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d130",
+            "snapshotId": "e63d134",
+            "type": {
+              "columnSize": "6!{java.lang.Integer}",
+              "dataTypeId": "3!{java.lang.Integer}",
+              "decimalDigits": "0!{java.lang.Integer}",
+              "typeName": "NUMBER"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "NAME",
+            "nullable": true,
+            "order": "2!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d137",
+            "snapshotId": "e63d139",
+            "type": {
+              "columnSize": "200!{java.lang.Integer}",
+              "columnSizeUnit": "CHAR!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "ORDEREXECUTED",
+            "nullable": false,
+            "order": "5!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d150",
+            "snapshotId": "e63d155",
+            "type": {
+              "dataTypeId": "3!{java.lang.Integer}",
+              "decimalDigits": "0!{java.lang.Integer}",
+              "typeName": "NUMBER"
+            }
+          }
+        },
+        {
+          "column": {
+            "defaultValue": "VARCHAR2",
+            "name": "PARAM_TYPE",
+            "nullable": true,
+            "order": "6!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d137",
+            "snapshotId": "e63d143",
+            "type": {
+              "columnSize": "50!{java.lang.Integer}",
+              "columnSizeUnit": "CHAR!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "POSTAL_CODE",
+            "nullable": true,
+            "order": "3!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#e63d108",
+            "snapshotId": "e63d111",
+            "type": {
+              "columnSize": "12!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "POSTAL_CODE",
+            "nullable": true,
+            "order": "3!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d114",
+            "remarks": "Postal code of the location of an office, warehouse, or production site \nof a company.",
+            "snapshotId": "e63d118",
+            "type": {
+              "columnSize": "12!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "POSTAL_CODE",
+            "nullable": true,
+            "order": "2!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#e63d103",
+            "snapshotId": "e63d105",
+            "type": {
+              "columnSize": "12!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "REGION_ID",
+            "nullable": true,
+            "order": "3!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d124",
+            "remarks": "Region ID for the country. Foreign key to region_id column in the departments table.",
+            "snapshotId": "e63d127",
+            "type": {
+              "dataTypeId": "3!{java.lang.Integer}",
+              "typeName": "NUMBER"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "REGION_ID",
+            "notNullConstraintName": "REGION_ID_NN",
+            "nullable": false,
+            "order": "1!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d145",
+            "remarks": "Primary key of regions table.",
+            "snapshotId": "e63d147",
+            "type": {
+              "dataTypeId": "3!{java.lang.Integer}",
+              "typeName": "NUMBER"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "REGION_NAME",
+            "nullable": true,
+            "order": "2!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d145",
+            "remarks": "Names of regions. Locations are in the countries of these regions.",
+            "snapshotId": "e63d148",
+            "type": {
+              "columnSize": "25!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "SCOPE",
+            "nullable": true,
+            "order": "5!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d137",
+            "snapshotId": "e63d142",
+            "type": {
+              "columnSize": "200!{java.lang.Integer}",
+              "columnSizeUnit": "CHAR!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "STATE_PROVINCE",
+            "nullable": true,
+            "order": "5!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#e63d108",
+            "snapshotId": "e63d113",
+            "type": {
+              "columnSize": "25!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "STATE_PROVINCE",
+            "nullable": true,
+            "order": "5!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d114",
+            "remarks": "State or Province where an office, warehouse, or production site of a \ncompany is located.",
+            "snapshotId": "e63d120",
+            "type": {
+              "columnSize": "25!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "STATE_PROVINCE",
+            "nullable": true,
+            "order": "4!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#e63d103",
+            "snapshotId": "e63d107",
+            "type": {
+              "columnSize": "25!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "STREET_ADDRESS",
+            "nullable": true,
+            "order": "2!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#e63d108",
+            "snapshotId": "e63d110",
+            "type": {
+              "columnSize": "40!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "STREET_ADDRESS",
+            "nullable": true,
+            "order": "2!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d114",
+            "remarks": "Street address of an office, warehouse, or production site of a company.\nContains building number and street name",
+            "snapshotId": "e63d117",
+            "type": {
+              "columnSize": "40!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "STREET_ADDRESS",
+            "nullable": true,
+            "order": "1!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.View#e63d103",
+            "snapshotId": "e63d104",
+            "type": {
+              "columnSize": "40!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "TAG",
+            "nullable": true,
+            "order": "10!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d150",
+            "snapshotId": "e63d160",
+            "type": {
+              "columnSize": "255!{java.lang.Integer}",
+              "columnSizeUnit": "BYTE!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        },
+        {
+          "column": {
+            "name": "VALUE",
+            "nullable": true,
+            "order": "3!{java.lang.Integer}",
+            "relation": "liquibase.structure.core.Table#e63d137",
+            "snapshotId": "e63d140",
+            "type": {
+              "columnSize": "200!{java.lang.Integer}",
+              "columnSizeUnit": "CHAR!{liquibase.structure.core.DataType$ColumnSizeUnit}",
+              "dataTypeId": "12!{java.lang.Integer}",
+              "typeName": "VARCHAR"
+            }
+          }
+        }]
+      ,
+      "liquibase.structure.core.ForeignKey": [
+        {
+          "foreignKey": {
+            "deferrable": false,
+            "deleteRule": "importedKeyRestrict!{liquibase.structure.core.ForeignKeyConstraintType}",
+            "foreignKeyColumns": [
+              "liquibase.structure.core.Column#e63d121"]
+            ,
+            "foreignKeyTable": "liquibase.structure.core.Table#e63d114",
+            "initiallyDeferred": false,
+            "name": "LOC_C_ID_FK",
+            "primaryKeyColumns": [
+              "liquibase.structure.core.Column#e63d123"]
+            ,
+            "primaryKeyTable": "liquibase.structure.core.Table#e63d124",
+            "snapshotId": "e63d122",
+            "updateRule": "importedKeyRestrict!{liquibase.structure.core.ForeignKeyConstraintType}",
+            "validate": true
+          }
+        }]
+      ,
+      "liquibase.structure.core.Index": [
+        {
+          "index": {
+            "columns": [
+              "liquibase.structure.core.Column#e63d123"]
+            ,
+            "name": "COUNTRY_C_ID_PK",
+            "snapshotId": "e63d125",
+            "table": "liquibase.structure.core.Table#e63d124",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "columns": [
+              "liquibase.structure.core.Column#e63d132"]
+            ,
+            "name": "JOB_ID_PK",
+            "snapshotId": "e63d131",
+            "table": "liquibase.structure.core.Table#e63d130",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "columns": [
+              "liquibase.structure.core.Column#e63d116"]
+            ,
+            "name": "LOC_ID_PK",
+            "snapshotId": "e63d115",
+            "table": "liquibase.structure.core.Table#e63d114",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "columns": [
+              "liquibase.structure.core.Column#e63d167"]
+            ,
+            "name": "PK_DATABASECHANGELOGLOCK",
+            "snapshotId": "e63d166",
+            "table": "liquibase.structure.core.Table#e63d165",
+            "unique": true
+          }
+        },
+        {
+          "index": {
+            "columns": [
+              "liquibase.structure.core.Column#e63d147"]
+            ,
+            "name": "REG_ID_PK",
+            "snapshotId": "e63d146",
+            "table": "liquibase.structure.core.Table#e63d145",
+            "unique": true
+          }
+        }]
+      ,
+      "liquibase.structure.core.PrimaryKey": [
+        {
+          "primaryKey": {
+            "backingIndex": "liquibase.structure.core.Index#e63d125",
+            "columns": [
+              "liquibase.structure.core.Column#e63d123"]
+            ,
+            "name": "COUNTRY_C_ID_PK",
+            "snapshotId": "e63d128",
+            "table": "liquibase.structure.core.Table#e63d124",
+            "validate": true
+          }
+        },
+        {
+          "primaryKey": {
+            "backingIndex": "liquibase.structure.core.Index#e63d131",
+            "columns": [
+              "liquibase.structure.core.Column#e63d132"]
+            ,
+            "name": "JOB_ID_PK",
+            "snapshotId": "e63d136",
+            "table": "liquibase.structure.core.Table#e63d130",
+            "validate": true
+          }
+        },
+        {
+          "primaryKey": {
+            "backingIndex": "liquibase.structure.core.Index#e63d115",
+            "columns": [
+              "liquibase.structure.core.Column#e63d116"]
+            ,
+            "name": "LOC_ID_PK",
+            "snapshotId": "e63d129",
+            "table": "liquibase.structure.core.Table#e63d114",
+            "validate": true
+          }
+        },
+        {
+          "primaryKey": {
+            "backingIndex": "liquibase.structure.core.Index#e63d166",
+            "columns": [
+              "liquibase.structure.core.Column#e63d167"]
+            ,
+            "name": "PK_DATABASECHANGELOGLOCK",
+            "snapshotId": "e63d171",
+            "table": "liquibase.structure.core.Table#e63d165",
+            "validate": true
+          }
+        },
+        {
+          "primaryKey": {
+            "backingIndex": "liquibase.structure.core.Index#e63d146",
+            "columns": [
+              "liquibase.structure.core.Column#e63d147"]
+            ,
+            "name": "REG_ID_PK",
+            "snapshotId": "e63d149",
+            "table": "liquibase.structure.core.Table#e63d145",
+            "validate": true
+          }
+        }]
+      ,
+      "liquibase.structure.core.Schema": [
+        {
+          "schema": {
+            "catalog": "liquibase.structure.core.Catalog#e63d100",
+            "default": true,
+            "name": "LIQUIBASE",
+            "snapshotId": "e63d101"
+          }
+        }]
+      ,
+      "liquibase.structure.core.Sequence": [
+        {
+          "sequence": {
+            "cacheSize": "0!{java.math.BigInteger}",
+            "incrementBy": "100!{java.math.BigInteger}",
+            "maxValue": "9900!{java.math.BigInteger}",
+            "name": "LOCATIONS_SEQ",
+            "schema": "liquibase.structure.core.Schema#e63d101",
+            "snapshotId": "e63d102",
+            "startValue": "3300!{java.math.BigInteger}"
+          }
+        }]
+      ,
+      "liquibase.structure.core.Table": [
+        {
+          "table": {
+            "columns": [
+              "liquibase.structure.core.Column#e63d138",
+              "liquibase.structure.core.Column#e63d139",
+              "liquibase.structure.core.Column#e63d140",
+              "liquibase.structure.core.Column#e63d141",
+              "liquibase.structure.core.Column#e63d142",
+              "liquibase.structure.core.Column#e63d143",
+              "liquibase.structure.core.Column#e63d144"]
+            ,
+            "default_tablespace": true,
+            "name": "APPLICATION_PARAMS",
+            "schema": "liquibase.structure.core.Schema#e63d101",
+            "snapshotId": "e63d137",
+            "tablespace": "USERS"
+          }
+        },
+        {
+          "table": {
+            "columns": [
+              "liquibase.structure.core.Column#e63d123",
+              "liquibase.structure.core.Column#e63d126",
+              "liquibase.structure.core.Column#e63d127"]
+            ,
+            "default_tablespace": true,
+            "indexes": [
+              "liquibase.structure.core.Index#e63d125"]
+            ,
+            "name": "COUNTRIES",
+            "primaryKey": "liquibase.structure.core.PrimaryKey#e63d128",
+            "remarks": "country table. Contains 25 rows. References with locations table.",
+            "schema": "liquibase.structure.core.Schema#e63d101",
+            "snapshotId": "e63d124",
+            "tablespace": "USERS"
+          }
+        },
+        {
+          "table": {
+            "columns": [
+              "liquibase.structure.core.Column#e63d151",
+              "liquibase.structure.core.Column#e63d152",
+              "liquibase.structure.core.Column#e63d153",
+              "liquibase.structure.core.Column#e63d154",
+              "liquibase.structure.core.Column#e63d155",
+              "liquibase.structure.core.Column#e63d156",
+              "liquibase.structure.core.Column#e63d157",
+              "liquibase.structure.core.Column#e63d158",
+              "liquibase.structure.core.Column#e63d159",
+              "liquibase.structure.core.Column#e63d160",
+              "liquibase.structure.core.Column#e63d161",
+              "liquibase.structure.core.Column#e63d162",
+              "liquibase.structure.core.Column#e63d163",
+              "liquibase.structure.core.Column#e63d164"]
+            ,
+            "default_tablespace": true,
+            "name": "DATABASECHANGELOG",
+            "schema": "liquibase.structure.core.Schema#e63d101",
+            "snapshotId": "e63d150",
+            "tablespace": "USERS"
+          }
+        },
+        {
+          "table": {
+            "columns": [
+              "liquibase.structure.core.Column#e63d167",
+              "liquibase.structure.core.Column#e63d168",
+              "liquibase.structure.core.Column#e63d169",
+              "liquibase.structure.core.Column#e63d170"]
+            ,
+            "default_tablespace": true,
+            "indexes": [
+              "liquibase.structure.core.Index#e63d166"]
+            ,
+            "name": "DATABASECHANGELOGLOCK",
+            "primaryKey": "liquibase.structure.core.PrimaryKey#e63d171",
+            "schema": "liquibase.structure.core.Schema#e63d101",
+            "snapshotId": "e63d165",
+            "tablespace": "USERS"
+          }
+        },
+        {
+          "table": {
+            "columns": [
+              "liquibase.structure.core.Column#e63d132",
+              "liquibase.structure.core.Column#e63d133",
+              "liquibase.structure.core.Column#e63d134",
+              "liquibase.structure.core.Column#e63d135"]
+            ,
+            "default_tablespace": true,
+            "indexes": [
+              "liquibase.structure.core.Index#e63d131"]
+            ,
+            "name": "JOBS",
+            "primaryKey": "liquibase.structure.core.PrimaryKey#e63d136",
+            "schema": "liquibase.structure.core.Schema#e63d101",
+            "snapshotId": "e63d130",
+            "tablespace": "USERS"
+          }
+        },
+        {
+          "table": {
+            "columns": [
+              "liquibase.structure.core.Column#e63d116",
+              "liquibase.structure.core.Column#e63d117",
+              "liquibase.structure.core.Column#e63d118",
+              "liquibase.structure.core.Column#e63d119",
+              "liquibase.structure.core.Column#e63d120",
+              "liquibase.structure.core.Column#e63d121"]
+            ,
+            "default_tablespace": true,
+            "indexes": [
+              "liquibase.structure.core.Index#e63d115"]
+            ,
+            "name": "LOCATIONS",
+            "outgoingForeignKeys": [
+              "liquibase.structure.core.ForeignKey#e63d122"]
+            ,
+            "primaryKey": "liquibase.structure.core.PrimaryKey#e63d129",
+            "remarks": "Locations table that contains specific address of a specific office,\nwarehouse, and/or production site of a company. Does not store addresses /\nlocations of customers. Contains 23 rows; references with the\ndepartments and countries tables.",
+            "schema": "liquibase.structure.core.Schema#e63d101",
+            "snapshotId": "e63d114",
+            "tablespace": "USERS"
+          }
+        },
+        {
+          "table": {
+            "columns": [
+              "liquibase.structure.core.Column#e63d147",
+              "liquibase.structure.core.Column#e63d148"]
+            ,
+            "default_tablespace": true,
+            "indexes": [
+              "liquibase.structure.core.Index#e63d146"]
+            ,
+            "name": "REGIONS",
+            "primaryKey": "liquibase.structure.core.PrimaryKey#e63d149",
+            "remarks": "Regions table that contains region numbers and names. Contains 4 rows; references with the Countries table.",
+            "schema": "liquibase.structure.core.Schema#e63d101",
+            "snapshotId": "e63d145",
+            "tablespace": "USERS"
+          }
+        }]
+      ,
+      "liquibase.structure.core.View": [
+        {
+          "view": {
+            "columns": [
+              "liquibase.structure.core.Column#e63d109",
+              "liquibase.structure.core.Column#e63d110",
+              "liquibase.structure.core.Column#e63d111",
+              "liquibase.structure.core.Column#e63d112",
+              "liquibase.structure.core.Column#e63d113"]
+            ,
+            "definition": "SELECT c.country_name,\n\t       l.street_address,\n\t       l.postal_code,\n\t       l.city,\n\t       l.state_province\n\t  FROM locations l\n\t  JOIN countries c ON c.country_id = l.country_id",
+            "editioning": false,
+            "name": "COUNTRIES_LOCATIONS_V",
+            "schema": "liquibase.structure.core.Schema#e63d101",
+            "snapshotId": "e63d108"
+          }
+        },
+        {
+          "view": {
+            "columns": [
+              "liquibase.structure.core.Column#e63d104",
+              "liquibase.structure.core.Column#e63d105",
+              "liquibase.structure.core.Column#e63d106",
+              "liquibase.structure.core.Column#e63d107"]
+            ,
+            "definition": "SELECT \n\t       l.street_address,\n\t       l.postal_code,\n\t       l.city,\n\t       l.state_province\n\t  FROM locations l",
+            "editioning": false,
+            "name": "LOCATIONS_V",
+            "schema": "liquibase.structure.core.Schema#e63d101",
+            "snapshotId": "e63d103"
+          }
+        }]
+      
+    },
+    "snapshotControl": {
+      "snapshotControl": {
+        "includedType": [
+          "liquibase.structure.core.Catalog",
+          "liquibase.structure.core.Column",
+          "liquibase.structure.core.ForeignKey",
+          "liquibase.structure.core.Index",
+          "liquibase.structure.core.PrimaryKey",
+          "liquibase.structure.core.Schema",
+          "liquibase.structure.core.Sequence",
+          "liquibase.structure.core.Table",
+          "liquibase.structure.core.UniqueConstraint",
+          "liquibase.structure.core.View"]
+        
+      }
+    }
+  }
+}
