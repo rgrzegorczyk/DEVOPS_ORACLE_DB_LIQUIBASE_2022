@@ -5,9 +5,8 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
             http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.4.xsd">  
             
-            <includeAll path="/database/release_scripts" />
-            <changeSet  author="${release_author}"  id="compile_invalid_objects_${release_number}" failOnError="true" context="${release_number}" labels="${release_number}">
-                <preConditions onFail="CONTINUE" onFailMessage="Compile when invalid objects exist" onSqlOutput="TEST">
+            <changeSet  author="rgrzegorczyk"  id="compile_invalid_objects" failOnError="true" runAlways="true">
+                <preConditions onFail="CONTINUE" onError="WARN" onFailMessage="Compile when invalid objects exist" onSqlOutput="TEST">
                     <sqlCheck expectedResult="1">
                     select count(*)
                     from all_objects
