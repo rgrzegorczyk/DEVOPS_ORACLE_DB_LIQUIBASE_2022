@@ -10,5 +10,5 @@
             <include file="/changelog/3_changelog_co_exist_objects.xml" />
             <!--include file="/changelog/4_changelog_dml.xml" /-->
             <include file="/changelog/5_changelog_replaceable.xml"/>  
-            <include file="/changelog/6_changelog_end.xml" />    
+            <!--include file="/changelog/6_changelog_end.xml" /-->    
 </databaseChangeLog>
